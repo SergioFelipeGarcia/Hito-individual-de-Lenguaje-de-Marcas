@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<pedidos>
+    <anno year="2021">
+        <trimestre num="1">
+            <pedido>
+                <cliente>
+                    <nombre>María</nombre>
+                    <apellidos>González Pérez</apellidos>
+                    <telefono>555-123-4567</telefono>
+                    <direccion>
+                        <calle>Calle Mayor, 1</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28001</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>maria.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-01-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10001</numero_pedido>
+                    <fecha_compra>2021-01-02</fecha_compra>
+                    <fecha_entrega>2021-01-05</fecha_entrega>
+                    <total_factura>29.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camiseta de mujer</nombre_producto>
+                            <referencia>ABC123</referencia>
+                            <precio>29.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+        </trimestre>
+    </anno>
+</pedidos>

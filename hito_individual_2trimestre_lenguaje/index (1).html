@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <h2>Pedidos</h2>
+
+        <section>
+
+        </section>
+        <script>
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// comprueba si el navegador admite XMLHttpRequest. Si es así, se crea un objeto XMLHttpRequest.
+                // si no crea un objeto ActiveXObject para Internet Explorer. Sirve para hacer solicitudes HTTP
+                // desde un script del lado del cliente y actualizar partes de una página web sin tener que volver a cargar la página completa.
+                
+
+
+
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+                
+                
+               
+                // Luego, se abre el archivo "documento1.xml" mediante una solicitud GET
+                // utilizando el objeto XMLHttpRequest. La opción "false" indica que la solicitud es síncrona, 
+                //lo que significa que el  script se ejecuta hasta que se recibe una respuesta.
+
+           
+            xmlhttp.open("GET","documento1.xml",false);
+            xmlhttp.send();
+            // Con el metododo responseXML nos traemos todo el contenido del archivo XML que tenemos en el backend  y lo almacenamos en una variable xmlDoc
+            // Ojo hay que tener cuidado con los tiempos de respuesta si vamos a traernos un fichero xml muy grande.
+            xmlDoc=xmlhttp.responseXML;
+            //Con la línea de código const section = document.querySelector('section'); lo que hace es seleccionar
+            // el primer elemento HTML que coincide con el selector CSS section y lo almacena en la variable section
+            const section = document.querySelector('section');
+            document.write("<table class='table' border='10'>");
+            // obtenemos el conjunto de elementos "pedido" del archivo XML utilizando el método getElementsByTagName. Se almacenan en la variable "pedidos".
+            // si miramos el fichero <pedido> datos del cliente y los detalles del pedido con los productos y sus importes.
+            var pedidos=xmlDoc.getElementsByTagName("pedido");
+            //En esta parte estoy creando una tabla con 8 columnas y una fila que contiene los encabezados de cada columna.
+            //El primer document.write("<tr>"); crea una nueva fila en la tabla y las siguientes lineas crean los encabezados 
+            //La ultima fila el  document.write("</tr>"); cierra los encabezados
+            document.write("<tr>");
+            document.write("<th>Cliente</th>");
+            document.write("<th>Fecha de compra</th>");
+            document.write("<th>Fecha de entrega</th>");
+            document.write("<th>Producto</th>");
+            document.write("<th>Referencia</th>");
+            document.write("<th>Precio</th>");
+            document.write("<th>Unidades</th>");
+            document.write("<th>Total de Factura</th>");
+            document.write("</tr>");
+            
+             
+           //A continuación, se utiliza un bucle for para iterar sobre los elementos "pedido". En cada iteración, 
+           //la variable i toma el valor del índice correspondiente en el arreglo pedidos 
+           //y se sige ejecutando hasta que llega a los 80  pedidos
+           
+            for(var i=0;i<pedidos.length;i++)
+            {
+                //En esta linea se extrae el valor del elemento "nombre" dentro del elemento "pedido" en el archivo XML
+                //Aqui "pedidos" es un array que contiene todos los elementos "pedido" del archivo XML.
+                //Con getElementsByTagName("nombre")" devuelve un array de elementos con  los que tengan el nombre de
+                //"nombre" dentro del elemento "pedido" y
+                // con "[0]" selecciona el primer elemento del array de elementos con nombre "nombre" dentro del elemento "pedido".
+                //Con "childNodes[0]"lo que hace es seleccionar el primer nodo hijo del elemento "nombre"
+                // Y ".nodeValue" devuelve el valor del nodo de texto seleccionado, 
+                //que en este caso es el valor del campo "nombre" del pedido.
+                //Y asi con todos los demás.
+                nombre=pedidos[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue
+                apellidos=pedidos[i].getElementsByTagName("apellidos")[0].childNodes[0].nodeValue
+                fecha_compra=pedidos[i].getElementsByTagName("fecha_compra")[0].childNodes[0].nodeValue
+                fecha_entrega=pedidos[i].getElementsByTagName("fecha_entrega")[0].childNodes[0].nodeValue
+                nombre_producto=pedidos[i].getElementsByTagName("nombre_producto")[0].childNodes[0].nodeValue
+                referencia=pedidos[i].getElementsByTagName("referencia")[0].childNodes[0].nodeValue
+                precio=pedidos[i].getElementsByTagName("precio")[0].childNodes[0].nodeValue
+                unidades=pedidos[i].getElementsByTagName("unidades")[0].childNodes[0].nodeValue
+                total_factura=pedidos[i].getElementsByTagName("total_factura")[0].childNodes[0].nodeValue
+                // En este codigo lo que hago es crear la tabla para mostrar los pedidos
+                //En esta linea utilizo el metodo  document.write("<tr><td>"); para definir una fila 
+                //en la tabla y el document.write(nombre + " " + apellidos); escribe en cada fila 
+                // de la columna clientes el nombre y apellido de cada cliente además concateno las dos
+                // variables con el espacio y el + 
+                //Con las demás variables sigue la misma formula se ponen en la columna que le corresponde por la 
+                //estructura hecha en la tabla y muestran los datos  en cada fila
+                document.write("<tr><td>");
+                document.write(nombre + " " + apellidos);
+                document.write("</td><td>");
+                document.write(fecha_compra);
+                document.write("</td><td>");
+                document.write(fecha_entrega);
+                document.write("</td><td>");
+                document.write(nombre_producto);
+                document.write("</td><td>");
+                document.write(referencia);
+                document.write("</td><td>");
+                document.write(precio);
+                document.write("</td><td>");
+                document.write(unidades);
+                document.write("</td><td>");
+                document.write(total_factura);
+                document.write("</td>");
+            }
+            document.write("</table>");// Con esto cierro la tabla
+        </script>
+
+
+
+        <h2>Clientes</h2>
+        <section>
+
+        </section>
+    
+        <script>
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET","documento1.xml",false);
+            xmlhttp.send();
+            xmlDoc=xmlhttp.responseXML;
+            document.write("<table class='table' border='10'>");
+            var pedidos=xmlDoc.getElementsByTagName("pedido");
+            
+            document.write("<tr>");
+            document.write("<th>Clientes</th>");
+            document.write("<th>Telefonos</th>");
+            document.write("<th>Correo electronico </th>");
+            document.write("<th>Direcciónes</th>");
+            document.write("<th>Ciudades</th>");
+            document.write("<th>Provincias</th>");
+            document.write("<th>Codigo postal</th>");
+            document.write("<th>Fecha de Inclusion</th>");
+            document.write("</tr>");
+            for(var i=0;i<pedidos.length;i++)
+            {
+                nombre=pedidos[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue
+                apellidos=pedidos[i].getElementsByTagName("apellidos")[0].childNodes[0].nodeValue
+                telefono=pedidos[i].getElementsByTagName("telefono")[0].childNodes[0].nodeValue
+                correo_electronico=pedidos[i].getElementsByTagName("correo_electronico")[0].childNodes[0].nodeValue
+                calle=pedidos[i].getElementsByTagName("calle")[0].childNodes[0].nodeValue
+                ciudad=pedidos[i].getElementsByTagName("ciudad")[0].childNodes[0].nodeValue
+                codigo_postal=pedidos[i].getElementsByTagName("codigo_postal")[0].childNodes[0].nodeValue
+                provincia=pedidos[i].getElementsByTagName("provincia")[0].childNodes[0].nodeValue
+                fecha_inclusion=pedidos[i].getElementsByTagName("fecha_inclusion")[0].childNodes[0].nodeValue
+
+                document.write("<tr><td>");
+                document.write(nombre + " " + apellidos);
+                document.write("</td><td>");
+                document.write(telefono);
+                document.write("</td><td>");
+                document.write(correo_electronico);
+                document.write("</td><td>");
+                document.write( calle );
+                document.write("</td><td>");
+                document.write(ciudad);
+                document.write("</td><td>");
+                document.write(provincia);
+                document.write("</td><td>");
+                document.write(codigo_postal);
+                document.write("</td><td>")
+                document.write(fecha_inclusion);      
+                document.write("</td></tr>")
+            }
+            document.write("</table>");
+
+        </script>
+        
+        <h2>Facturas</h2>
+        <section>
+
+        </section>
+        <script class="tabla3">
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET","documento1.xml",false);
+            xmlhttp.send();
+            xmlDoc=xmlhttp.responseXML;
+            document.write("<table class='table' border='10'>");
+            var pedidos=xmlDoc.getElementsByTagName("pedido");
+            
+            document.write("<tr>");
+            document.write("<th>Clientes</th>");
+            document.write("<th>fecha de compra </th>");
+            document.write("<th>fecha de entrega</th>");
+            document.write("<th>Numero de Pedido</th>");
+            document.write("<th>Producto</th>");
+            document.write("<th>Unidades</th>");
+            document.write("<th>Precio</th>");
+            document.write("<th>Total de Factura</th>");
+            document.write("</tr>");
+            for(var i=0;i<pedidos.length;i++)
+            {
+                nombre=pedidos[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue
+                apellidos=pedidos[i].getElementsByTagName("apellidos")[0].childNodes[0].nodeValue
+                fecha_compra=pedidos[i].getElementsByTagName("fecha_compra")[0].childNodes[0].nodeValue
+                fecha_entrega=pedidos[i].getElementsByTagName("fecha_entrega")[0].childNodes[0].nodeValue
+                numero_pedido=pedidos[i].getElementsByTagName("numero_pedido")[0].childNodes[0].nodeValue
+                nombre_producto=pedidos[i].getElementsByTagName("nombre_producto")[0].childNodes[0].nodeValue
+                unidades=pedidos[i].getElementsByTagName("unidades")[0].childNodes[0].nodeValue
+                precio=pedidos[i].getElementsByTagName("precio")[0].childNodes[0].nodeValue
+                total_factura=pedidos[i].getElementsByTagName("total_factura")[0].childNodes[0].nodeValue
+
+
+                document.write("<tr><td>");
+                document.write(nombre + " " + apellidos);
+                document.write("</td><td>");
+                document.write(fecha_compra);
+                document.write("</td><td>");
+                document.write( fecha_entrega );
+                document.write("</td><td>");
+                document.write(numero_pedido);
+                document.write("</td><td>");
+                document.write(nombre_producto);
+                document.write("</td><td>");
+                document.write(unidades);
+                document.write("</td><td>");
+                document.write(precio);
+                document.write("</td><td>");
+                document.write(total_factura);   
+                document.write("</td></tr>")
+            }
+            document.write("</table>");
+
+        </script>
+        <section>
+
+        </section>
+        <h2>Productos</h2>
+        <section>
+
+        </section>
+        <script class="tabla4">
+            if (window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET","documento1.xml",false);
+            xmlhttp.send();
+            xmlDoc=xmlhttp.responseXML;
+            document.write("<table class='table' border='10'>");
+            document.write("<tr>");
+            document.write("<th>Producto</th>");
+            document.write("<th>Referencia</th>");
+            document.write("<th>Precio</th>");
+            document.write("<th>Unidades</th>");
+            document.write("</tr>");
+            var pedidos=xmlDoc.getElementsByTagName("pedido");
+            for(var i=0;i<pedidos.length;i++)
+            {
+             // el valor de los atributos "num" y "year" de los nodos "padre" y "padre del padre" del elemento actual. 
+             //Estos valores se almacenan en las variables "trimestre" y "anno", respectivamente.
+
+                var trimestre=pedidos[i].parentNode.getAttribute("num");
+                var anno=pedidos[i].parentNode.parentNode.getAttribute("year");
+                //En esta linea se  verifica si el trimestre es "1" y el año es "2021", o si el trimestre es "4" y el año es "2022"
+                // si se cumple la condicion  se muestran los pedidos vendidos en esos trimestres 
+                if ((trimestre === "1" && anno === "2021") || (trimestre === "4" && anno === "2022")) {
+                    nombre_producto=pedidos[i].getElementsByTagName("nombre_producto")[0].childNodes[0].nodeValue
+                    referencia=pedidos[i].getElementsByTagName("referencia")[0].childNodes[0].nodeValue
+                    precio=pedidos[i].getElementsByTagName("precio")[0].childNodes[0].nodeValue
+                    unidades=pedidos[i].getElementsByTagName("unidades")[0].childNodes[0].nodeValue
+        
+                    document.write("<tr>");
+                    document.write("<td>");
+                    document.write(nombre_producto);
+                    document.write("</td><td>");
+                    document.write(referencia);
+                    document.write("</td><td>");
+                    document.write(precio);
+                    document.write("</td><td>");
+                    document.write(unidades);
+                    document.write("</td></tr>")
+                    document.write("</tr>");
+                }
+            }
+            document.write("</table>");
+        
+        </script>
+    
+
+    </body>
+</html>

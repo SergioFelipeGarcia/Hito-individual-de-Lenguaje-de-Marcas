@@ -1,0 +1,2460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedidos[
+<!ELEMENT pedidos (anno*)>
+<!ELEMENT anno (trimestre*)>
+<!ATTLIST anno year CDATA #REQUIRED>
+<!ELEMENT trimestre (pedido+)>
+<!ATTLIST trimestre num CDATA #REQUIRED>
+<!ELEMENT pedido (cliente, fecha_inclusion, detalle_pedido)>
+<!ELEMENT cliente (nombre, apellidos, telefono, direccion, correo_electronico)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT direccion (calle, ciudad, codigo_postal, provincia)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT codigo_postal (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT correo_electronico (#PCDATA)>
+<!ELEMENT fecha_inclusion (#PCDATA)>
+<!ELEMENT detalle_pedido (numero_pedido, fecha_compra, fecha_entrega, total_factura, productos)>
+<!ELEMENT numero_pedido (#PCDATA)>
+<!ELEMENT fecha_compra (#PCDATA)>
+<!ELEMENT fecha_entrega (#PCDATA)>
+<!ELEMENT total_factura (#PCDATA)>
+<!ELEMENT productos (producto+)>
+<!ELEMENT producto (nombre_producto, referencia, precio, unidades)>
+<!ELEMENT nombre_producto (#PCDATA)>
+<!ELEMENT referencia (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT unidades (#PCDATA)>
+
+]>
+<pedidos>
+    <anno year="2021">
+        <trimestre num="1">
+            <pedido>
+                <cliente>
+                    <nombre>María</nombre>
+                    <apellidos>González Pérez</apellidos>
+                    <telefono>555-123-4567</telefono>
+                    <direccion>
+                        <calle>Calle Mayor, 1</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28001</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>maria.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-01-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10001</numero_pedido>
+                    <fecha_compra>2021-01-02</fecha_compra>
+                    <fecha_entrega>2021-01-05</fecha_entrega>
+                    <total_factura>29.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camiseta de mujer</nombre_producto>
+                            <referencia>ABC123</referencia>
+                            <precio>29.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Pedro</nombre>
+                    <apellidos>González Gomez</apellidos>
+                    <telefono>556-122-4568</telefono>
+                    <direccion>
+                        <calle>Anillo Periférico</calle>
+                        <ciudad>Ciudad de México</ciudad>
+                        <codigo_postal>28002</codigo_postal>
+                        <provincia>México</provincia>
+                    </direccion>
+                    <correo_electronico>pedro.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-02-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10002</numero_pedido>
+                    <fecha_compra>2021-02-03</fecha_compra>
+                    <fecha_entrega>2021-02-05</fecha_entrega>
+                    <total_factura>65.95</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Zapatos caballero casual planos</nombre_producto>
+                            <referencia>ABC156</referencia>
+                            <precio>65.95</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Paco</nombre>
+                    <apellidos>Domingez Gomez</apellidos>
+                    <telefono>123-122-4564</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28003</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>paco.domingez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-02-06</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10003</numero_pedido>
+                    <fecha_compra>2021-02-07</fecha_compra>
+                    <fecha_entrega>2021-02-09</fecha_entrega>
+                    <total_factura>20.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Zapato cómodo</nombre_producto>
+                            <referencia>ABC178</referencia>
+                            <precio>20.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Sergio</nombre>
+                    <apellidos>Felipe García</apellidos>
+                    <telefono>654-987-4564</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28004</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>sergio.felipe@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-02-06</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10004</numero_pedido>
+                    <fecha_compra>2021-02-10</fecha_compra>
+                    <fecha_entrega>2021-02-12</fecha_entrega>
+                    <total_factura>26.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>deportivas de niño</nombre_producto>
+                            <referencia>ABC200</referencia>
+                            <precio>26.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>María</nombre>
+                    <apellidos>González Pérez</apellidos>
+                    <telefono>555-123-4567</telefono>
+                    <direccion>
+                        <calle>Calle Mayor, 1</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28001</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>maria.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-01-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10009</numero_pedido>
+                    <fecha_compra>2021-01-25</fecha_compra>
+                    <fecha_entrega>2021-01-27</fecha_entrega>
+                    <total_factura>19.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Vestido camisero con cinturón para anudar</nombre_producto>
+                            <referencia>ZSD209</referencia>
+                            <precio>19.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Paco</nombre>
+                    <apellidos>Jimenez Lopez</apellidos>
+                    <telefono>677-122-4564</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28005</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>paco.jimenez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-02-10</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10006</numero_pedido>
+                    <fecha_compra>2021-02-11</fecha_compra>
+                    <fecha_entrega>2021-02-13</fecha_entrega>
+                    <total_factura>20.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>deportivo de trekking para hombre</nombre_producto>
+                            <referencia>ABC180</referencia>
+                            <precio>20.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Encarna</nombre>
+                    <apellidos>Perez Delgado</apellidos>
+                    <telefono>766-122-4564</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28006</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>encarna.perez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-02-08</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10007</numero_pedido>
+                    <fecha_compra>2021-02-08</fecha_compra>
+                    <fecha_entrega>2021-02-10</fecha_entrega>
+                    <total_factura>19.98</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Pantalón de felpa con puños en el bajo</nombre_producto>
+                            <referencia>SDE321</referencia>
+                            <precio>9.99</precio>
+                            <unidades>2</unidades>
+                        </producto>
+
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Victor</nombre>
+                    <apellidos>García Fernandez</apellidos>
+                    <telefono>879-361-4564</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28012</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>victor.garcia@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-02-10</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10028</numero_pedido>
+                    <fecha_compra>2021-02-10</fecha_compra>
+                    <fecha_entrega>2021-02-12</fecha_entrega>
+                    <total_factura>53.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>mocasín castellano de piel</nombre_producto>
+                            <referencia>OLÑ618</referencia>
+                            <precio>53.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+           <pedido>
+                <cliente>
+                    <nombre>Encarna</nombre>
+                    <apellidos>Perez Delgado</apellidos>
+                    <telefono>766-122-4564</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28006</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>encarna.perez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-02-08</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10075</numero_pedido>
+                    <fecha_compra>2021-02-26</fecha_compra>
+                    <fecha_entrega>2021-02-28</fecha_entrega>
+                    <total_factura>12.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Jersey tricot manga larga acabados en canalé</nombre_producto>
+                            <referencia>KGQ671</referencia>
+                            <precio>12.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+           
+            <pedido>
+                <cliente>
+                    <nombre>Encarna</nombre>
+                    <apellidos>Perez Delgado</apellidos>
+                    <telefono>766-122-4564</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28006</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>encarna.perez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-02-08</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10097</numero_pedido>
+                    <fecha_compra>2021-03-03</fecha_compra>
+                    <fecha_entrega>2021-03-05</fecha_entrega>
+                    <total_factura>12.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Pijama camiseta manga corta </nombre_producto>
+                            <referencia>GVÑ058</referencia>
+                            <precio>12.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            
+        </trimestre>
+        <trimestre num="2">
+            <pedido>
+                <cliente>
+                    <nombre>Natalia</nombre>
+                    <apellidos>Ramirez Benito</apellidos>
+                    <telefono>517-602-9148</telefono>
+                    <direccion>
+                        <calle>Gran Vía</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28534</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>natalia.ramirez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-04-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10098</numero_pedido>
+                    <fecha_compra>2021-04-02</fecha_compra>
+                    <fecha_entrega>2021-04-04</fecha_entrega>
+                    <total_factura>19.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Vestido evasé punto tricot manga larga</nombre_producto>
+                            <referencia>FÑC401</referencia>
+                            <precio>19.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Natalia</nombre>
+                    <apellidos>Ramírez Benito</apellidos>
+                    <telefono>517-602-9148</telefono>
+                    <direccion>
+                        <calle>Gran Vía</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28534</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>natalia.ramirez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-04-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10099</numero_pedido>
+                    <fecha_compra>2021-04-06</fecha_compra>
+                    <fecha_entrega>2021-04-08</fecha_entrega>
+                    <total_factura>80.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chaquetón de lana liso para mujer</nombre_producto>
+                            <referencia>LXZ345</referencia>
+                            <precio>80.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Natalia</nombre>
+                    <apellidos>Ramirez Benito</apellidos>
+                    <telefono>517-602-9148</telefono>
+                    <direccion>
+                        <calle>Gran Vía</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28534</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>natalia.ramirez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-04-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10100</numero_pedido>
+                    <fecha_compra>2021-04-10</fecha_compra>
+                    <fecha_entrega>2021-04-12</fecha_entrega>
+                    <total_factura>14.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chaqueta larga de cuadros con bolsillos</nombre_producto>
+                            <referencia>QGA333</referencia>
+                            <precio>14.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Natalia</nombre>
+                    <apellidos>Ramirez Benito</apellidos>
+                    <telefono>517-602-9148</telefono>
+                    <direccion>
+                        <calle>Gran Vía</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28534</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>natalia.ramirez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-04-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10101</numero_pedido>
+                    <fecha_compra>2021-04-13</fecha_compra>
+                    <fecha_entrega>2021-04-15</fecha_entrega>
+                    <total_factura>19.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chaleco acolchado con bolsa para guardar</nombre_producto>
+                            <referencia>MAW008</referencia>
+                            <precio>19.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Natalia</nombre>
+                    <apellidos>Ramirez Benito</apellidos>
+                    <telefono>517-602-9148</telefono>
+                    <direccion>
+                        <calle>Gran Vía</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28534</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>natalia.ramirez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-04-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10103</numero_pedido>
+                    <fecha_compra>2021-04-17</fecha_compra>
+                    <fecha_entrega>2021-04-19</fecha_entrega>
+                    <total_factura>15.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Falda vaquera denim elástico 5 bolsillos</nombre_producto>
+                            <referencia>SÑM409</referencia>
+                            <precio>15.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Carla</nombre>
+                    <apellidos>Ramirez Benito</apellidos>
+                    <telefono>517-602-9148</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28679</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>carla.ramirez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-05-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10104</numero_pedido>
+                    <fecha_compra>2021-05-02</fecha_compra>
+                    <fecha_entrega>2021-05-04</fecha_entrega>
+                    <total_factura>79.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chaqueta fluida estampada</nombre_producto>
+                            <referencia>JCZ100</referencia>
+                            <precio>39.99</precio>
+                            <unidades>2</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Patricia</nombre>
+                    <apellidos>García Perez</apellidos>
+                    <telefono>689-195-9148</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28689</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>carla.ramirez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-05-07</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>101019</numero_pedido>
+                    <fecha_compra>2021-05-07</fecha_compra>
+                    <fecha_entrega>2021-05-09</fecha_entrega>
+                    <total_factura>89.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Blazer de manga larga de mujer</nombre_producto>
+                            <referencia>KER170</referencia>
+                            <precio>44,99</precio>
+                            <unidades>2</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Esperanza</nombre>
+                    <apellidos>Smith Perez</apellidos>
+                    <telefono>910-692-9148</telefono>
+                    <direccion>
+                        <calle>Wall Street </calle>
+                        <ciudad>Nueva York</ciudad>
+                        <codigo_postal>28779</codigo_postal>
+                        <provincia>Estados Unidos</provincia>
+                    </direccion>
+                    <correo_electronico>esperanza.smith@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-05-26</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10174</numero_pedido>
+                    <fecha_compra>2021-05-26</fecha_compra>
+                    <fecha_entrega>2021-05-28</fecha_entrega>
+                    <total_factura>15.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Legging sin costuras punto liso elástico</nombre_producto>
+                            <referencia>TRZ050</referencia>
+                            <precio>7.99</precio>
+                            <unidades>2</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Sofia</nombre>
+                    <apellidos>Jimenez Benito</apellidos>
+                    <telefono>407-018-9148</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28479</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>sofia.jimenez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-06-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10175</numero_pedido>
+                    <fecha_compra>2021-06-02</fecha_compra>
+                    <fecha_entrega>2021-06-04</fecha_entrega>
+                    <total_factura>17,99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Pantalón vaquero efecto push up</nombre_producto>
+                            <referencia>lCZ100</referencia>
+                            <precio>17,99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Raquel</nombre>
+                    <apellidos>Perez Benito</apellidos>
+                    <telefono>653-783-9148</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28680</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>carla.ramirez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-06-27</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10199</numero_pedido>
+                    <fecha_compra>2021-06-27</fecha_compra>
+                    <fecha_entrega>2021-06-29</fecha_entrega>
+                    <total_factura>15.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chaqueta cárdigan tacto mohair</nombre_producto>
+                            <referencia>OYR199</referencia>
+                            <precio>15.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+        </trimestre>
+        
+        <trimestre num="3">
+            <pedido>
+                <cliente>
+                    <nombre>Ivan </nombre>
+                    <apellidos>Jimenez Lopez</apellidos>
+                    <telefono>034-114-4567</telefono>
+                    <direccion>
+                        <calle>Calle de Segovia</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28208</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>ivan.jimenez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-07-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10200</numero_pedido>
+                    <fecha_compra>2021-07-02</fecha_compra>
+                    <fecha_entrega>2021-07-04</fecha_entrega>
+                    <total_factura>20.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>zapatilla de casa abierta hombre confortable</nombre_producto>
+                            <referencia>DKV015</referencia>
+                            <precio>20.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Belen</nombre>
+                    <apellidos>Carrasco Gomez</apellidos>
+                    <telefono>806-335-4568</telefono>
+                    <direccion>
+                        <calle>Anillo Periférico</calle>
+                        <ciudad>Ciudad de México</ciudad>
+                        <codigo_postal>28202</codigo_postal>
+                        <provincia>México</provincia>
+                    </direccion>
+                    <correo_electronico>belen.carrasco@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-07-06</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10206</numero_pedido>
+                    <fecha_compra>2021-07-06</fecha_compra>
+                    <fecha_entrega>2021-07-08</fecha_entrega>
+                    <total_factura>7.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camiseta escote redondo manga larga</nombre_producto>
+                            <referencia>RIW902</referencia>
+                            <precio>7.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+           <pedido>
+                <cliente>
+                    <nombre>Belen</nombre>
+                    <apellidos>Carrasco Gomez</apellidos>
+                    <telefono>806-335-4568</telefono>
+                    <direccion>
+                        <calle>Anillo Periférico</calle>
+                        <ciudad>Ciudad de México</ciudad>
+                        <codigo_postal>28202</codigo_postal>
+                        <provincia>México</provincia>
+                    </direccion>
+                    <correo_electronico>belen.carrasco@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-07-06</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10207</numero_pedido>
+                    <fecha_compra>2021-07-10</fecha_compra>
+                    <fecha_entrega>2021-07-12</fecha_entrega>
+                    <total_factura>13.45</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Short estampado cinturilla elástica</nombre_producto>
+                            <referencia>WBN922</referencia>
+                            <precio>13.45</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Belen</nombre>
+                    <apellidos>Carrasco Gomez</apellidos>
+                    <telefono>806-335-4568</telefono>
+                    <direccion>
+                        <calle>Anillo Periférico</calle>
+                        <ciudad>Ciudad de México</ciudad>
+                        <codigo_postal>28202</codigo_postal>
+                        <provincia>México</provincia>
+                    </direccion>
+                    <correo_electronico>belen.carrasco@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-07-06</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10208</numero_pedido>
+                    <fecha_compra>2021-07-10</fecha_compra>
+                    <fecha_entrega>2021-07-12</fecha_entrega>
+                    <total_factura>13.45</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Short estampado cinturilla elástica</nombre_producto>
+                            <referencia>WBN922</referencia>
+                            <precio>13.45</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+              <pedido>
+                <cliente>
+                    <nombre>Belen</nombre>
+                    <apellidos>Carrasco Gomez</apellidos>
+                    <telefono>806-335-4568</telefono>
+                    <direccion>
+                        <calle>Anillo Periférico</calle>
+                        <ciudad>Ciudad de México</ciudad>
+                        <codigo_postal>28202</codigo_postal>
+                        <provincia>México</provincia>
+                    </direccion>
+                    <correo_electronico>belen.carrasco@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-07-06</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10209</numero_pedido>
+                    <fecha_compra>2021-07-15</fecha_compra>
+                    <fecha_entrega>2021-07-17</fecha_entrega>
+                    <total_factura>14.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Sudadera de felpa con capucha y bolsillo canguro</nombre_producto>
+                            <referencia>ÑFY836</referencia>
+                            <precio>14.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Paco</nombre>
+                    <apellidos>Felipe Lopez</apellidos>
+                    <telefono>642-122-4564</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>29005</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>paco.jimenez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-08-10</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10230</numero_pedido>
+                    <fecha_compra>2021-08-10</fecha_compra>
+                    <fecha_entrega>2021-08-12</fecha_entrega>
+                    <total_factura>49,99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Sudadera con capucha y bolsillos beige con logo Rigby Go</nombre_producto>
+                            <referencia>ABC180</referencia>
+                            <precio>49,99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Belen</nombre>
+                    <apellidos>Carrasco Gomez</apellidos>
+                    <telefono>806-335-4568</telefono>
+                    <direccion>
+                        <calle>Anillo Periférico</calle>
+                        <ciudad>Ciudad de México</ciudad>
+                        <codigo_postal>28202</codigo_postal>
+                        <provincia>México</provincia>
+                    </direccion>
+                    <correo_electronico>belen.carrasco@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-07-06</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10213</numero_pedido>
+                    <fecha_compra>2021-08-03</fecha_compra>
+                    <fecha_entrega>2021-08-05</fecha_entrega>
+                    <total_factura>11.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Bañador estampado con forro frontal</nombre_producto>
+                            <referencia>LYP837</referencia>
+                            <precio>11.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Victor</nombre>
+                    <apellidos>Carrasco Fernandez</apellidos>
+                    <telefono>501-361-4564</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28812</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>victor.carrasco@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-08-25</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10456</numero_pedido>
+                    <fecha_compra>2021-08-25</fecha_compra>
+                    <fecha_entrega>2021-08-27</fecha_entrega>
+                    <total_factura>53.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>mocasín castellano de piel</nombre_producto>
+                            <referencia>OLÑ618</referencia>
+                            <precio>53.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+           <pedido>
+                <cliente>
+                    <nombre>Lucia</nombre>
+                    <apellidos>Perez Delgado</apellidos>
+                    <telefono>003-122-4564</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28706</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>lucia.perez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-09-08</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10175</numero_pedido>
+                    <fecha_compra>2021-09-08</fecha_compra>
+                    <fecha_entrega>2021-09-10</fecha_entrega>
+                    <total_factura>20.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Bota casual para mujer</nombre_producto>
+                            <referencia>USK611</referencia>
+                            <precio>20.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+           
+            <pedido>
+                <cliente>
+                    <nombre>Carolina</nombre>
+                    <apellidos>Gomez  Carrasco</apellidos>
+                    <telefono>020-122-4564</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28709</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>carolina.gomez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-09-10</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10797</numero_pedido>
+                    <fecha_compra>2021-09-11</fecha_compra>
+                    <fecha_entrega>2021-09-13</fecha_entrega>
+                    <total_factura>19.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Vestido evasé punto tricot manga larga</nombre_producto>
+                            <referencia>IOU068</referencia>
+                            <precio>19.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            
+            
+            
+            
+            
+            
+            
+
+        </trimestre>
+        <trimestre num="4">
+            <pedido>
+                <cliente>
+                    <nombre>Jorge</nombre>
+                    <apellidos>Fernandez Lopez</apellidos>
+                    <telefono>400-114-4567</telefono>
+                    <direccion>
+                        <calle>Calle de Segovia</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28308</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>jorge.fernandez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-10-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10800</numero_pedido>
+                    <fecha_compra>2021-10-02</fecha_compra>
+                    <fecha_entrega>2021-10-04</fecha_entrega>
+                    <total_factura>59.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chaqueta negra Hayden reciclada y ultraligera con etiqueta textil Polo Club</nombre_producto>
+                            <referencia>YÑX005</referencia>
+                            <precio>59.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+           <pedido>
+                <cliente>
+                    <nombre>Jorge</nombre>
+                    <apellidos>Fernandez Lopez</apellidos>
+                    <telefono>400-114-4567</telefono>
+                    <direccion>
+                        <calle>Calle de Segovia</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28308</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>jorge.fernandez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-10-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10801</numero_pedido>
+                    <fecha_compra>2021-10-06</fecha_compra>
+                    <fecha_entrega>2021-10-08</fecha_entrega>
+                    <total_factura>24.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Gorra beige con logo bordado Rigby Go</nombre_producto>
+                            <referencia>TGP015</referencia>
+                            <precio>24.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Jorge</nombre>
+                    <apellidos>Fernandez Lopez</apellidos>
+                    <telefono>400-114-4567</telefono>
+                    <direccion>
+                        <calle>Calle de Segovia</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28308</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>jorge.fernandez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-10-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10802</numero_pedido>
+                    <fecha_compra>2021-10-010</fecha_compra>
+                    <fecha_entrega>2021-10-12</fecha_entrega>
+                    <total_factura>39.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Jersey básico de cuello de pico marrón con logotipo Polo Club</nombre_producto>
+                            <referencia>RCP035</referencia>
+                            <precio>39.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Jorge</nombre>
+                    <apellidos>Fernandez Lopez</apellidos>
+                    <telefono>400-114-4567</telefono>
+                    <direccion>
+                        <calle>Calle de Segovia</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28308</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>jorge.fernandez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-10-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10803</numero_pedido>
+                    <fecha_compra>2021-10-14</fecha_compra>
+                    <fecha_entrega>2021-10-16</fecha_entrega>
+                    <total_factura>49.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Pantalón chino beige de algodón elástico con detalles Polo Club</nombre_producto>
+                            <referencia>HJZ995</referencia>
+                            <precio>49.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Jorge</nombre>
+                    <apellidos>Fernandez Lopez</apellidos>
+                    <telefono>400-114-4567</telefono>
+                    <direccion>
+                        <calle>Calle de Segovia</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28308</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>jorge.fernandez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-10-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10804</numero_pedido>
+                    <fecha_compra>2021-10-18</fecha_compra>
+                    <fecha_entrega>2021-10-20</fecha_entrega>
+                    <total_factura>19.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camiseta gris de manga corta orgánica de cuello redondo Less Impact Polo Club</nombre_producto>
+                            <referencia>YBW405</referencia>
+                            <precio>19.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Felipe</nombre>
+                    <apellidos>Gonzalez Mediano</apellidos>
+                    <telefono>618-122-4564</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>29006</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>felipe.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-11-10</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10231</numero_pedido>
+                    <fecha_compra>2021-11-10</fecha_compra>
+                    <fecha_entrega>2021-11-12</fecha_entrega>
+                    <total_factura>49.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Sudadera orgánica gris vigoré unisex de cuello redondo full color</nombre_producto>
+                            <referencia>CBA180</referencia>
+                            <precio>49.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Paula</nombre>
+                    <apellidos>Cubero Gomez</apellidos>
+                    <telefono>392-686-4432</telefono>
+                    <direccion>
+                        <calle>Anillo Periférico</calle>
+                        <ciudad>Ciudad de México</ciudad>
+                        <codigo_postal>28222</codigo_postal>
+                        <provincia>México</provincia>
+                    </direccion>
+                    <correo_electronico>paula.cubero@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-11-15</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10223</numero_pedido>
+                    <fecha_compra>2021-11-15</fecha_compra>
+                    <fecha_entrega>2021-11-17</fecha_entrega>
+                    <total_factura>25.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Zuecos marrones símil ante troquelado</nombre_producto>
+                            <referencia>ZZT837</referencia>
+                            <precio>25.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Agata</nombre>
+                    <apellidos>Rodríguez Fernandez</apellidos>
+                    <telefono>522-236-7862</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28813</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>agata.rodriguez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-12-05</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>106287</numero_pedido>
+                    <fecha_compra>2021-12-05</fecha_compra>
+                    <fecha_entrega>2021-12-05</fecha_entrega>
+                    <total_factura>2.48</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chanclas estampadas con strass de fantasía</nombre_producto>
+                            <referencia>ERE618</referencia>
+                            <precio>2.48</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+           <pedido>
+                <cliente>
+                    <nombre>Julieta</nombre>
+                    <apellidos>Ruiz Delgado</apellidos>
+                    <telefono>553-375-6747</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28716</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>julieta.ruiz@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-12-08</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10344</numero_pedido>
+                    <fecha_compra>2021-12-08</fecha_compra>
+                    <fecha_entrega>2021-12-10</fecha_entrega>
+                    <total_factura>17.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Leggings estampados, estilo lápiz</nombre_producto>
+                            <referencia>UNY611</referencia>
+                            <precio>17.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+           
+            <pedido>
+                <cliente>
+                    <nombre>Nerea</nombre>
+                    <apellidos>Ramos  Carrasco</apellidos>
+                    <telefono>964-536-5796</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28719</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>nerea.ramos@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2021-12-22</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>12345</numero_pedido>
+                    <fecha_compra>2021-12-22</fecha_compra>
+                    <fecha_entrega>2021-12-24</fecha_entrega>
+                    <total_factura>19.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Zapatos bailarinas de antelina</nombre_producto>
+                            <referencia>VLQ068</referencia>
+                            <precio>19.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+        </trimestre>
+    </anno>
+    <anno year="2022">
+        <trimestre num="1">
+            <pedido>
+                <cliente>
+                    <nombre>Maia</nombre>
+                    <apellidos>	Serrano  Carrasco</apellidos>
+                    <telefono>699-846-8652</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>24686</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>maia.serrano@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-01-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>12885</numero_pedido>
+                    <fecha_compra>2022-01-02</fecha_compra>
+                    <fecha_entrega>2022-01-04</fecha_entrega>
+                    <total_factura>19.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Zapatos bailarinas de antelina</nombre_producto>
+                            <referencia>NBV078</referencia>
+                            <precio>19.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                            
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Maia</nombre>
+                    <apellidos>	Serrano  Carrasco</apellidos>
+                    <telefono>699-846-8652</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>24686</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>maia.serrano@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-01-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>12886</numero_pedido>
+                    <fecha_compra>2022-01-06</fecha_compra>
+                    <fecha_entrega>2022-01-08</fecha_entrega>
+                    <total_factura>8.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camisón de manga 3/4 estampado</nombre_producto>
+                            <referencia>SAV078</referencia>
+                            <precio>8.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                            
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Maia</nombre>
+                    <apellidos>	Serrano  Carrasco</apellidos>
+                    <telefono>699-846-8652</telefono>
+                    <direccion>
+                        <calle>Calle Huertas</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>24686</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>maia.serrano@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-01-02</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>12887</numero_pedido>
+                    <fecha_compra>2022-01-10</fecha_compra>
+                    <fecha_entrega>2022-01-12</fecha_entrega>
+                    <total_factura>58.95</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Zapato de Salón de Mujer en Piel</nombre_producto>
+                            <referencia>VTX078</referencia>
+                            <precio>58.95</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                            
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+                <pedido>
+                    <cliente>
+                        <nombre>Atenea</nombre>
+                        <apellidos>Suarez Fernandez</apellidos>
+                        <telefono>297-865-4365</telefono>
+                        <direccion>
+                            <calle>Puerta del Sol.</calle>
+                            <ciudad>Madrid</ciudad>
+                            <codigo_postal>28911</codigo_postal>
+                            <provincia>Madrid</provincia>
+                        </direccion>
+                        <correo_electronico>atenea.suarez@gmail.com</correo_electronico>
+                    </cliente>
+                    <fecha_inclusion>2022-02-05</fecha_inclusion>
+                    <detalle_pedido>
+                        <numero_pedido>107287</numero_pedido>
+                        <fecha_compra>2022-02-05</fecha_compra>
+                        <fecha_entrega>2022-02-07</fecha_entrega>
+                        <total_factura>2.48</total_factura>
+                        <productos>
+                            <producto>
+                                <nombre_producto>Chanclas estampadas con strass de fantasía</nombre_producto>
+                                <referencia>HLB618</referencia>
+                                <precio>2.48</precio>
+                                <unidades>1</unidades>
+                            </producto>
+                        
+                        </productos>
+                    </detalle_pedido>
+                </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Atenea</nombre>
+                    <apellidos>Suarez Fernandez</apellidos>
+                    <telefono>297-865-4365</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28911</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>atenea.suarez@gmail.com</correo_electronico>
+                </cliente>
+                    <fecha_inclusion>2022-02-05</fecha_inclusion>
+                    <detalle_pedido>
+                        <numero_pedido>107288</numero_pedido>
+                        <fecha_compra>2022-02-10</fecha_compra>
+                        <fecha_entrega>2022-02-12</fecha_entrega>
+                        <total_factura>6.99</total_factura>
+                        <productos>
+                            <producto>
+                                <nombre_producto>Camiseta manga larga regulable canesú de guipur</nombre_producto>
+                                <referencia>HLB618</referencia>
+                                <precio>6.99</precio>
+                                <unidades>1</unidades>
+                            </producto>
+                        
+                        </productos>
+                    </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Daniela</nombre>
+                    <apellidos>Vázquez Mediano</apellidos>
+                    <telefono>859-922-3337</telefono>
+                    <direccion>
+                        <calle>Puerta del Sol.</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>29010</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>daniela.vazquez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-02-10</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10236</numero_pedido>
+                    <fecha_compra>2022-02-10</fecha_compra>
+                    <fecha_entrega>2022-02-12</fecha_entrega>
+                    <total_factura>49.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Sudadera orgánica gris vigoré unisex de cuello redondo full color</nombre_producto>
+                            <referencia>ZSM180</referencia>
+                            <precio>49.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Alejandra</nombre>
+                    <apellidos>Fernandez Lopez</apellidos>
+                    <telefono>938-429-7688</telefono>
+                    <direccion>
+                        <calle>Calle de Segovia</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28328</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>alejandra.fernandez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-02-12</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10892</numero_pedido>
+                    <fecha_compra>2022-02-12</fecha_compra>
+                    <fecha_entrega>2022-02-14</fecha_entrega>
+                    <total_factura>39.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Jersey básico de cuello de pico marrón con logotipo Polo Club</nombre_producto>
+                            <referencia>XXG035</referencia>
+                            <precio>39.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Claudia</nombre>
+                    <apellidos>Fernandez Lopez</apellidos>
+                    <telefono>852-468-5442</telefono>
+                    <direccion>
+                        <calle>Calle de Segovia</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28329</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>claudia.fernandez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-03-24</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10893</numero_pedido>
+                    <fecha_compra>2022-03-24</fecha_compra>
+                    <fecha_entrega>2022-03-26</fecha_entrega>
+                    <total_factura>36.79</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Abrigo de paño con capucha cierre de cremallera</nombre_producto>
+                            <referencia>RBL035</referencia>
+                            <precio>36.79</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Lucía</nombre>
+                    <apellidos>Alonso García</apellidos>
+                    <telefono>954-234-5678</telefono>
+                    <direccion>
+                    <calle>Calle Mayor</calle>
+                    <ciudad>Sevilla</ciudad>
+                    <codigo_postal>41001</codigo_postal>
+                    <provincia>Sevilla</provincia>
+                    </direccion>
+                    <correo_electronico>lucia.alonso@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-03-20</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>98765</numero_pedido>
+                    <fecha_compra>2022-03-20</fecha_compra>
+                    <fecha_entrega>2022-03-23</fecha_entrega>
+                    <total_factura>29.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Pendientes de plata</nombre_producto>
+                            <referencia>PLT056</referencia>
+                            <precio>29.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                   
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Antonio</nombre>
+                    <apellidos>Ruiz García</apellidos>
+                    <telefono>931-345-6789</telefono>
+                    <direccion>
+                    <calle>Calle Real</calle>
+                    <ciudad>Barcelona</ciudad>
+                    <codigo_postal>08001</codigo_postal>
+                    <provincia>Barcelona</provincia>
+                    </direccion>
+                    <correo_electronico>antonio.ruiz@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-03-19</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>76543</numero_pedido>
+                    <fecha_compra>2022-03-19</fecha_compra>
+                    <fecha_entrega>2022-03-21</fecha_entrega>
+                    <total_factura>19.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Gafas de sol</nombre_producto>
+                            <referencia>GFS018</referencia>
+                            <precio>19.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                   
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+
+        </trimestre>
+        <trimestre num="2">
+            <pedido>
+                <cliente>
+                    <nombre>Juan</nombre>
+                    <apellidos>Martín Sánchez</apellidos>
+                    <telefono>958-567-1234</telefono>
+                    <direccion>
+                    <calle>Calle Ancha</calle>
+                    <ciudad>Granada</ciudad>
+                    <codigo_postal>18001</codigo_postal>
+                    <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>juan.martin@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-02-18</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>24680</numero_pedido>
+                    <fecha_compra>2022-04-18</fecha_compra>
+                    <fecha_entrega>2022-04-21</fecha_entrega>
+                    <total_factura>24.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camisa de cuadros</nombre_producto>
+                            <referencia>CCD019</referencia>
+                            <precio>24.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Juan</nombre>
+                    <apellidos>Martín Sánchez</apellidos>
+                    <telefono>958-567-1234</telefono>
+                    <direccion>
+                    <calle>Calle Ancha</calle>
+                    <ciudad>Granada</ciudad>
+                    <codigo_postal>18001</codigo_postal>
+                    <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>juan.martin@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-02-18</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>24681</numero_pedido>
+                    <fecha_compra>2022-04-23</fecha_compra>
+                    <fecha_entrega>2022-04-25</fecha_entrega>
+                    <total_factura>24.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camisa  a rayas de color rojo y blanco</nombre_producto>
+                            <referencia>EJW019</referencia>
+                            <precio>24.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Juan</nombre>
+                    <apellidos>Martín Sánchez</apellidos>
+                    <telefono>958-567-1234</telefono>
+                    <direccion>
+                    <calle>Calle Ancha</calle>
+                    <ciudad>Granada</ciudad>
+                    <codigo_postal>18001</codigo_postal>
+                    <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>juan.martin@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-02-18</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>24682</numero_pedido>
+                    <fecha_compra>2022-04-27</fecha_compra>
+                    <fecha_entrega>2022-04-29</fecha_entrega>
+                    <total_factura>79.98</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Zapatillas deportivas</nombre_producto>
+                            <referencia>PEL019</referencia>
+                            <precio>39.99</precio>
+                            <unidades>2</unidades>
+                        </producto>
+                    
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Isabel</nombre>
+                    <apellidos>González Pérez</apellidos>
+                    <telefono>910-123-4567</telefono>
+                    <direccion>
+                    <calle>Calle Mayor</calle>
+                    <ciudad>Madrid</ciudad>
+                    <codigo_postal>28013</codigo_postal>
+                    <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>isabel.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-05-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>13579</numero_pedido>
+                    <fecha_compra>2022-05-01</fecha_compra>
+                    <fecha_entrega>2022-05-03</fecha_entrega>
+                    <total_factura>25.00</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Pantalón vaquero</nombre_producto>
+                            <referencia>PNV104</referencia>
+                            <precio>25.00</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Isabel</nombre>
+                    <apellidos>González Pérez</apellidos>
+                    <telefono>910-123-4567</telefono>
+                    <direccion>
+                    <calle>Calle Mayor</calle>
+                    <ciudad>Madrid</ciudad>
+                    <codigo_postal>28013</codigo_postal>
+                    <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>isabel.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-05-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>13580</numero_pedido>
+                    <fecha_compra>2022-05-07</fecha_compra>
+                    <fecha_entrega>2022-05-09</fecha_entrega>
+                    <total_factura>25.00</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Pantalón vaquero</nombre_producto>
+                            <referencia>WEH104</referencia>
+                            <precio>25.00</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Antonio</nombre>
+                    <apellidos>Martínez Gómez</apellidos>
+                    <telefono>955-321-4567</telefono>
+                    <direccion>
+                    <calle>Calle Real</calle>
+                    <ciudad>Sevilla</ciudad>
+                    <codigo_postal>41001</codigo_postal>
+                    <provincia>Sevilla</provincia>
+                    </direccion>
+                    <correo_electronico>antonio.martinez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-05-21</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>86420</numero_pedido>
+                    <fecha_compra>2022-05-21</fecha_compra>
+                    <fecha_entrega>2022-05-23</fecha_entrega>
+                    <total_factura>79.98</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Cazadora de piel</nombre_producto>
+                            <referencia>CPM254</referencia>
+                            <precio>39.99</precio>
+                            <unidades>2</unidades>
+                        </producto>
+                   
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>María</nombre>
+                    <apellidos>García López</apellidos>
+                    <telefono>932-678-1234</telefono>
+                    <direccion>
+                    <calle>Avenida Diagonal</calle>
+                    <ciudad>Barcelona</ciudad>
+                    <codigo_postal>08019</codigo_postal>
+                    <provincia>Barcelona</provincia>
+                    </direccion>
+                    <correo_electronico>maria.garcia@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-06-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>35791</numero_pedido>
+                    <fecha_compra>2022-06-01</fecha_compra>
+                    <fecha_entrega>2022-06-03</fecha_entrega>
+                    <total_factura>24.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Pantalones cortos negros</nombre_producto>
+                            <referencia>NGD456</referencia>
+                            <precio>24.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>José</nombre>
+                    <apellidos>Rodríguez Martín</apellidos>
+                    <telefono>954-789-1234</telefono>
+                    <direccion>
+                    <calle>Calle Real</calle>
+                    <ciudad>Sevilla</ciudad>
+                    <codigo_postal>41001</codigo_postal>
+                    <provincia>Sevilla</provincia>
+                    </direccion>
+                    <correo_electronico>jose.rodriguez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-06-12</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>46890</numero_pedido>
+                    <fecha_compra>2022-06-12</fecha_compra>
+                    <fecha_entrega>2022-06-15</fecha_entrega>
+                    <total_factura>29.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Sudadera con capucha</nombre_producto>
+                            <referencia>DDQ789</referencia>
+                            <precio>29.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>David</nombre>
+                    <apellidos>Martínez Ruiz</apellidos>
+                    <telefono>910-456-7890</telefono>
+                    <direccion>
+                    <calle>Calle Alcalá</calle>
+                    <ciudad>Madrid</ciudad>
+                    <codigo_postal>28001</codigo_postal>
+                    <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>david.martinez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-06-21</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>35792</numero_pedido>
+                    <fecha_compra>2022-06-21</fecha_compra>
+                    <fecha_entrega>2022-06-23</fecha_entrega>
+                    <total_factura>24.99</total_factura>
+                    <productos>
+                  
+                        <producto>
+                            <nombre_producto>Pantalones de algodón</nombre_producto>
+                            <referencia>PAH456</referencia>
+                            <precio>24.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                   
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Alicia</nombre>
+                    <apellidos>Jiménez Pérez</apellidos>
+                    <telefono>971-123-4567</telefono>
+                    <direccion>
+                    <calle>Carrer d'Aragó</calle>
+                    <ciudad>Palma de Mallorca</ciudad>
+                    <codigo_postal>07005</codigo_postal>
+                    <provincia>Illes Balears</provincia>
+                    </direccion>
+                    <correo_electronico>alicia.jimenez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-06-25</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>35793</numero_pedido>
+                    <fecha_compra>2022-06-25</fecha_compra>
+                    <fecha_entrega>2022-06-25</fecha_entrega>
+                    <total_factura>7.99</total_factura>
+                    <productos>
+                   
+                    <producto>
+                        <nombre_producto>Pantalones cortos de running</nombre_producto>
+                        <referencia>MTZ456</referencia>
+                        <precio>7.99</precio>
+                        <unidades>1</unidades>
+                    </producto>
+                   
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+
+        </trimestre>
+        <trimestre num="3">
+            <pedido>
+                <cliente>
+                    <nombre>Lucía</nombre>
+                    <apellidos>Rodríguez Sánchez</apellidos>
+                    <telefono>958-321-4567</telefono>
+                    <direccion>
+                    <calle>Calle Recogidas</calle>
+                    <ciudad>Granada</ciudad>
+                    <codigo_postal>18001</codigo_postal>
+                    <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>lucia.rodriguez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-07-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>35794</numero_pedido>
+                    <fecha_compra>2022-07-01</fecha_compra>
+                    <fecha_entrega>2022-07-03</fecha_entrega>
+                    <total_factura>29.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Botines de piel</nombre_producto>
+                            <referencia>AJH123</referencia>
+                            <precio>29.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Lucía</nombre>
+                    <apellidos>Rodríguez Sánchez</apellidos>
+                    <telefono>958-321-4567</telefono>
+                    <direccion>
+                    <calle>Calle Recogidas</calle>
+                    <ciudad>Granada</ciudad>
+                    <codigo_postal>18001</codigo_postal>
+                    <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>lucia.rodriguez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-07-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>35796</numero_pedido>
+                    <fecha_compra>2022-07-10</fecha_compra>
+                    <fecha_entrega>2022-07-12</fecha_entrega>
+                    <total_factura>9.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Sujetador copa B grandes bustos sin aros</nombre_producto>
+                            <referencia>SUN123</referencia>
+                            <precio>9.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Lucía</nombre>
+                    <apellidos>Rodríguez Sánchez</apellidos>
+                    <telefono>958-321-4567</telefono>
+                    <direccion>
+                    <calle>Calle Recogidas</calle>
+                    <ciudad>Granada</ciudad>
+                    <codigo_postal>18001</codigo_postal>
+                    <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>lucia.rodriguez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-07-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>35797</numero_pedido>
+                    <fecha_compra>2022-07-15</fecha_compra>
+                    <fecha_entrega>2022-07-17</fecha_entrega>
+                    <total_factura>15.96</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Sudadera para niño de manga larga</nombre_producto>
+                            <referencia>DWH123</referencia>
+                            <precio>15.96</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Lucía</nombre>
+                    <apellidos>Rodríguez Sánchez</apellidos>
+                    <telefono>958-321-4567</telefono>
+                    <direccion>
+                    <calle>Calle Recogidas</calle>
+                    <ciudad>Granada</ciudad>
+                    <codigo_postal>18001</codigo_postal>
+                    <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>lucia.rodriguez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-07-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>35798</numero_pedido>
+                    <fecha_compra>2022-07-20</fecha_compra>
+                    <fecha_entrega>2022-07-22</fecha_entrega>
+                    <total_factura>33.95</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Sandalia de Cuña</nombre_producto>
+                            <referencia>GZL123</referencia>
+                            <precio>33.95</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Lucía</nombre>
+                    <apellidos>Rodríguez Sánchez</apellidos>
+                    <telefono>958-321-4567</telefono>
+                    <direccion>
+                    <calle>Calle Recogidas</calle>
+                    <ciudad>Granada</ciudad>
+                    <codigo_postal>18001</codigo_postal>
+                    <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>lucia.rodriguez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-07-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>35799</numero_pedido>
+                    <fecha_compra>2022-07-25</fecha_compra>
+                    <fecha_entrega>2022-07-27</fecha_entrega>
+                    <total_factura>15.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chaleco largo de tricot con cinturón</nombre_producto>
+                            <referencia>RAR123</referencia>
+                            <precio>15.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Marta</nombre>
+                    <apellidos>Rodríguez Gómez</apellidos>
+                    <telefono>912-345-678</telefono>
+                    <direccion>
+                    <calle>Calle Mayor</calle>
+                    <ciudad>Madrid</ciudad>
+                    <codigo_postal>28013</codigo_postal>
+                    <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>marta.rodriguez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-08-03</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>10001</numero_pedido>
+                    <fecha_compra>2022-08-03</fecha_compra>
+                    <fecha_entrega>2022-08-05</fecha_entrega>
+                    <total_factura>19.98</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camiseta de algodón</nombre_producto>
+                            <referencia>CAZ123</referencia>
+                            <precio>9.99</precio>
+                            <unidades>2</unidades>
+                        </producto>
+                   
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Carlos</nombre>
+                    <apellidos>González Fernández</apellidos>
+                    <telefono>910-123-456</telefono>
+                    <direccion>
+                    <calle>Calle Alcalá</calle>
+                    <ciudad>Madrid</ciudad>
+                    <codigo_postal>28002</codigo_postal>
+                    <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>carlos.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-08-15</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>00002</numero_pedido>
+                    <fecha_compra>2022-08-15</fecha_compra>
+                    <fecha_entrega>2022-08-17</fecha_entrega>
+                    <total_factura>69.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chaqueta de cuero</nombre_producto>
+                            <referencia>NCD789</referencia>
+                            <precio>69.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>David</nombre>
+                    <apellidos>González Sánchez</apellidos>
+                    <telefono>957-832-491</telefono>
+                    <direccion>
+                        <calle>Calle San Juan</calle>
+                        <ciudad>Sevilla</ciudad>
+                        <codigo_postal>41001</codigo_postal>
+                        <provincia>Sevilla</provincia>
+                    </direccion>
+                    <correo_electronico>david.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-09-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>98765</numero_pedido>
+                    <fecha_compra>2022-09-01</fecha_compra>
+                    <fecha_entrega>2022-09-03</fecha_entrega>
+                    <total_factura>71.8</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camiseta manga larga para hombre verde</nombre_producto>
+                            <referencia>BXL012</referencia>
+                            <precio>35.90</precio>
+                            <unidades>2</unidades>
+                        </producto>
+                       
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>María</nombre>
+                    <apellidos>Rodríguez García</apellidos>
+                    <telefono>910-674-239</telefono>
+                    <direccion>
+                        <calle>Avenida de la Constitución</calle>
+                        <ciudad>Granada</ciudad>
+                        <codigo_postal>18001</codigo_postal>
+                        <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>maria.rodriguez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-09-22</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>24680</numero_pedido>
+                    <fecha_compra>2022-09-22</fecha_compra>
+                    <fecha_entrega>2022-09-26</fecha_entrega>
+                    <total_factura>39.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chaqueta impermeable para mujer</nombre_producto>
+                            <referencia>FGP005</referencia>
+                            <precio>39.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Inés</nombre>
+                    <apellidos>Vazquez García</apellidos>
+                    <telefono>538-463-2897</telefono>
+                    <direccion>
+                        <calle>Avenida de la Constitución</calle>
+                        <ciudad>Granada</ciudad>
+                        <codigo_postal>18021</codigo_postal>
+                        <provincia>Granada</provincia>
+                    </direccion>
+                    <correo_electronico>ines.vazquez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-09-22</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>24681</numero_pedido>
+                    <fecha_compra>2022-09-28</fecha_compra>
+                    <fecha_entrega>2022-09-30</fecha_entrega>
+                    <total_factura>39.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>botas de niño</nombre_producto>
+                            <referencia>TKN005</referencia>
+                            <precio>39.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+
+        </trimestre>
+        <trimestre num="4">
+            <pedido>
+                <cliente>
+                    <nombre>David</nombre>
+                    <apellidos>Garzón Sánchez</apellidos>
+                    <telefono>959-592-3584</telefono>
+                    <direccion>
+                        <calle>Calle San Juan</calle>
+                        <ciudad>Sevilla</ciudad>
+                        <codigo_postal>41002</codigo_postal>
+                        <provincia>Sevilla</provincia>
+                    </direccion>
+                    <correo_electronico>david.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                    <fecha_inclusion>2022-10-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>99957</numero_pedido>
+                    <fecha_compra>2022-10-01</fecha_compra>
+                    <fecha_entrega>2022-10-03</fecha_entrega>
+                    <total_factura>14.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Camiseta algodón orgánico azul marino</nombre_producto>
+                            <referencia>ZEW012</referencia>
+                            <precio>14.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>David</nombre>
+                    <apellidos>Garzón Sánchez</apellidos>
+                    <telefono>959-592-3584</telefono>
+                    <direccion>
+                        <calle>Calle San Juan</calle>
+                        <ciudad>Sevilla</ciudad>
+                        <codigo_postal>41002</codigo_postal>
+                        <provincia>Sevilla</provincia>
+                    </direccion>
+                    <correo_electronico>david.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-10-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>99958</numero_pedido>
+                    <fecha_compra>2022-10-05</fecha_compra>
+                    <fecha_entrega>2022-10-07</fecha_entrega>
+                    <total_factura>32.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Jeans auténticos de corte recto - entrepierna. 72cm</nombre_producto>
+                            <referencia>YYM012</referencia>
+                            <precio>32.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>David</nombre>
+                    <apellidos>Garzón Sánchez</apellidos>
+                    <telefono>959-592-3584</telefono>
+                    <direccion>
+                        <calle>Calle San Juan</calle>
+                        <ciudad>Sevilla</ciudad>
+                        <codigo_postal>41002</codigo_postal>
+                        <provincia>Sevilla</provincia>
+                    </direccion>
+                    <correo_electronico>david.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-10-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>99959</numero_pedido>
+                    <fecha_compra>2022-10-10</fecha_compra>
+                    <fecha_entrega>2022-10-12</fecha_entrega>
+                    <total_factura>32.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Bata lisa</nombre_producto>
+                            <referencia>NQU012</referencia>
+                            <precio>32.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>David</nombre>
+                    <apellidos>Garzón Sánchez</apellidos>
+                    <telefono>959-592-3584</telefono>
+                    <direccion>
+                        <calle>Calle San Juan</calle>
+                        <ciudad>Sevilla</ciudad>
+                        <codigo_postal>41002</codigo_postal>
+                        <provincia>Sevilla</provincia>
+                    </direccion>
+                    <correo_electronico>david.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-10-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>99960</numero_pedido>
+                    <fecha_compra>2022-10-15</fecha_compra>
+                    <fecha_entrega>2022-10-17</fecha_entrega>
+                    <total_factura>53.98</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Jersey de punto de hombre</nombre_producto>
+                            <referencia>CSD012</referencia>
+                            <precio>26,99</precio>
+                            <unidades>2</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>David</nombre>
+                    <apellidos>Garzón Sánchez</apellidos>
+                    <telefono>959-592-3584</telefono>
+                    <direccion>
+                        <calle>Calle San Juan</calle>
+                        <ciudad>Sevilla</ciudad>
+                        <codigo_postal>41002</codigo_postal>
+                        <provincia>Sevilla</provincia>
+                    </direccion>
+                    <correo_electronico>david.gonzalez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-10-01</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>99961</numero_pedido>
+                    <fecha_compra>2022-10-20</fecha_compra>
+                    <fecha_entrega>2022-10-22</fecha_entrega>
+                    <total_factura>36.00</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Chándal club adulto conjunto pantalón y chaqueta men</nombre_producto>
+                            <referencia>AJG012</referencia>
+                            <precio>36.00</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Carlos</nombre>
+                    <apellidos>Blanco López</apellidos>
+                    <telefono>915-587-623</telefono>
+                    <direccion>
+                        <calle>Calle Mayor</calle>
+                        <ciudad>Valencia</ciudad>
+                        <codigo_postal>46002</codigo_postal>
+                        <provincia>Valencia</provincia>
+                    </direccion>
+                    <correo_electronico>carlos.blanco@hotmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-11-10</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>45678</numero_pedido>
+                    <fecha_compra>2022-11-10</fecha_compra>
+                    <fecha_entrega>2022-11-12</fecha_entrega>
+                    <total_factura>34.19</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Pantalón de batalla de lona de algodón</nombre_producto>
+                            <referencia>ZQZ123</referencia>
+                            <precio>34.19</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+           <pedido>
+                <cliente>
+                    <nombre>Sofía</nombre>
+                    <apellidos>González Gómez</apellidos>
+                    <telefono>962-456-789</telefono>
+                    <direccion>
+                        <calle>Calle Alcalá</calle>
+                        <ciudad>Madrid</ciudad>
+                        <codigo_postal>28009</codigo_postal>
+                        <provincia>Madrid</provincia>
+                    </direccion>
+                    <correo_electronico>sofia.gonzalez@hotmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-11-18</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>56789</numero_pedido>
+                    <fecha_compra>2022-11-18</fecha_compra>
+                    <fecha_entrega>2022-11-20</fecha_entrega>
+                    <total_factura>39.98</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Vaquero flare fit corte 5 bolsillos</nombre_producto>
+                            <referencia>YKA789</referencia>
+                            <precio>19.99</precio>
+                            <unidades>2</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Lucas</nombre>
+                    <apellidos>Martinez Jimenez</apellidos>
+                    <telefono>912-345-678</telefono>
+                    <direccion>
+                        <calle>Calle Mayor</calle>
+                        <ciudad>Barcelona</ciudad>
+                        <codigo_postal>08001</codigo_postal>
+                        <provincia>Barcelona</provincia>
+                    </direccion>
+                    <correo_electronico>lucas.martinez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-12-10</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>56789</numero_pedido>
+                    <fecha_compra>2022-12-10</fecha_compra>
+                    <fecha_entrega>2022-12-12</fecha_entrega>
+                    <total_factura>12,74</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Bóxer básico de algodón orgánico</nombre_producto>
+                            <referencia>SAM219</referencia>
+                            <precio>12,74</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Lucía</nombre>
+                    <apellidos>Martínez López</apellidos>
+                    <telefono>917-555-1234</telefono>
+                    <direccion>
+                        <calle>Calle del Mar</calle>
+                        <ciudad>Valencia</ciudad>
+                        <codigo_postal>46003</codigo_postal>
+                        <provincia>Valencia</provincia>
+                    </direccion>
+                    <correo_electronico>lucia.martinez@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-12-15</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>98765</numero_pedido>
+                    <fecha_compra>2022-12-15</fecha_compra>
+                    <fecha_entrega>2022-12-17</fecha_entrega>
+                    <total_factura>24.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Botas de piel con cordones</nombre_producto>
+                            <referencia>PWW702</referencia>
+                            <precio>24.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+            <pedido>
+                <cliente>
+                    <nombre>Carlos</nombre>
+                    <apellidos>Ruiz Sánchez</apellidos>
+                    <telefono>937-432-1234</telefono>
+                    <direccion>
+                        <calle>Calle del Sol</calle>
+                        <ciudad>Barcelona</ciudad>
+                        <codigo_postal>08012</codigo_postal>
+                        <provincia>Barcelona</provincia>
+                    </direccion>
+                    <correo_electronico>carlos.ruiz@gmail.com</correo_electronico>
+                </cliente>
+                <fecha_inclusion>2022-12-22</fecha_inclusion>
+                <detalle_pedido>
+                    <numero_pedido>54321</numero_pedido>
+                    <fecha_compra>2022-12-22</fecha_compra>
+                    <fecha_entrega>2022-12-24</fecha_entrega>
+                    <total_factura>79.99</total_factura>
+                    <productos>
+                        <producto>
+                            <nombre_producto>Cazadora de cuero con forro de borreguillo</nombre_producto>
+                            <referencia>CAZ901</referencia>
+                            <precio>79.99</precio>
+                            <unidades>1</unidades>
+                        </producto>
+                        
+                    </productos>
+                </detalle_pedido>
+            </pedido>
+        </trimestre>
+    </anno>
+</pedidos>

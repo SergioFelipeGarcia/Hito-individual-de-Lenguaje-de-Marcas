@@ -1,0 +1,147 @@
+/* Estilo para la tabla */
+table {
+    font-family: Times , sans-serif; /* establezco la fuente de texto para la tabla.*/
+    font-size: 16px; /*Aqui establezco el tamaño de texto para la tabla*/
+    border-collapse:collapse; /*Con border-collapse puedo unir las celdas de la tabla*/
+    width: 100%; /*Aqui con width hago que el ancho que ocupe sea del 100%*/
+    background-color: #f9f9f9;
+}
+  
+  /* Estilo para las celdas encabezado */
+  th {
+    background-color: #4CAF50;
+    color: white; /*El texto del encabezado lo pongo de color blanco*/
+    text-align: center;/*Centro el texto */
+    padding: 8px; /*Establezco un espacio entre el borde y contenido de una celda*/
+}
+  
+  /* Estilo para las celdas de datos */
+  td {
+    border: 1px solid #ddd;/*Le doy estilo a los bordes de las celdas de los datos*/
+    padding: 8px;
+    color:chocolate;
+}
+  
+  /* Estilo para las filas pares */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
+/* Estilo para las filas impares */
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+h2{
+    text-align: center;
+}
+/*@media permite consultar el tipo de pantalla que esta accediendo al contenido html y configurar dicho contenido para que se vea bien 'responsive' 
+  Todo lo que va entre {} es lo que cambia. Por ejemplo si la pantalla  es mayor o igual a 350px y menor o igual a 414px 'dispositivos móviles '
+  adapta todos los elemtos  a las propiedades indicadas.Por ejemplo el tamaño de fuente se establece en 14px para todo el elemento body.*/
+@media only screen and (max-width: 414px) and (min-width:350px) {
+    body {
+      font-size: 14px;
+    }
+  
+    h2 {
+      text-align: center;
+      padding: 0%;
+      margin: 0%;
+    }
+  
+   
+  
+    td  {
+      width: 70%;
+    }
+    .table {
+      width: 70%;
+    }
+  }
+  @media only screen and (max-width: 600px) and (min-width:540px) {
+    body {
+      font-size: 14px;
+    }
+  
+    h2 {
+      text-align: center;
+      padding: 0%;
+      margin: 0%;
+    }
+  
+   
+  
+    td  {
+      width: 70%;
+    }
+    table {
+      width: 70%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) and (min-width:720px)  {
+    /*  CSS específicos para pantallas de tamaño máximo de 768px */
+    body {
+      font-size: 14px;
+    }
+  
+    h2{
+      text-align: center;
+      padding: 0%;
+      margin: 0%;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 0%;
+    }
+    td  {
+      width: 70%;
+     
+    }
+    table {
+      width: 70%;
+    }
+  }
+  @media only screen and (max-width: 992px) and (min-width:960px) {
+    body {
+      font-size: 14px;
+    }
+  
+    h2 {
+      text-align: center;
+      padding: 0%;
+      margin: 0%;
+    }
+  
+   
+    td {
+      width: 70%;
+     
+    }
+    table {
+      width: 70%;
+    }
+    
+  }
+  
+  @media only screen and (max-width: 1200px) and (min-width:1140px) {
+    body {
+      font-size: 14px;
+    }
+  
+    h2 {
+      text-align: center;
+      padding: 0%;
+      margin: 0%;
+    }
+  
+    
+    td {
+      width: 70%;
+    }
+    table {
+      width: 70%;
+    }
+  
+  
+  }
